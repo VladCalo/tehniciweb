@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+}
+
+header {
+    width: 100vw;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav#main-nav {
+    background-color: #a0a0a0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px double lightgray;
+    border-top: 2px double lightgray;
+    margin-top: -5px;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+#main-nav a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #f1f1f1;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+#main-nav a:hover {
+    background-color: #505050;
+}
+
+#main-nav a.selected {
+    background-color: #808080;
+}
+
+.photo-card {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+    border: 1px solid #a0a0a0;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.photo-card img {
+    width: 300px;
+    height: auto;
+}
+
+.photo-card:hover {
+    transform: scale(1.1);
+}
+
+.sidenav {
+    flex-grow: 1;
+    margin: 10px;
+    border-right: 1px double lightblue;
+}
+
+.sidenav-menu {
+    list-style-type: none;
+    padding-left: 10px;
+}
+main {
+    width: 100%;
+}
+.title {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.title h3 {
+    width: 400px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: indigo;
+    text-transform: uppercase;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: darkseagreen;
+    border-top: 1px double steelblue;
+}
+
+.book-room-form {
+    display: flex;
+    flex-flow: column;
+}
+
+.main-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.main-content span {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*  Booking form */
+
+.form-section {
+    display: flex;
+    flex-flow: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.form-section-title {
+    font-size: 0.825rem;
+    color: indigo;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.form-section-content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.form-field {
+    display: flex;
+    flex-flow: column;
+    margin: 5px;
+}
+
+.form-field label {
+    color: grey;
+    font-size: 0.75rem;
+}
+
+.form-field input[type='text'] {
+    width: 120px;
+    font-size: 0.75rem;
+}
+
+.submit {
+    margin: 10px;
+}
+
+.submit button {
+    background-color: indigo;
+    color: white;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+/* Grid */
+.column .grid-header {
+    margin: 10px;
+    font-size: 1.2rem;
+    color: indigo;
+    font-weight: bold;
+    border-right: 1px solid white;
+}
+
+.grid {
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid indigo;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.grid-row {
+    display: flex;
+    flex-flow: row;
+
+    background-color: lightgray;
+}
+
+.grid-row:nth-child(odd) {
+    background-color: white;
+}
+
+.grid-row.hidden {
+    display: none;
+}
+
+.grid-row div {
+    width: 120px;
+    padding-left: 10px;
+    border-left: 1px solid indigo;
+    border-right: 1px solid indigo;
+}
+
+#header div {
+    background-color: indigo;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-right: 1px solid white;
+}
+#header div:last-child {
+    border-right: 1px solid indigo;
+}
+
+@media all and (max-width: 600px) {
+    main {
+        flex-flow: column;
+    }
+
+    .sidenav {
+        flex-grow: 1;
+        margin: 10px;
+        border: 0;
+    }
+
+    nav#main-nav {
+        height: fit-content;
+        flex-flow: column;
+    }
+
+    div.menu-item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Room Booking - Project</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <picture>
+                    <source srcset="/images/rebe-adelaida-zunQwMy5B6M-unsplash.jpg" media="(min-width: 600px)" />
+                    <img src="/images/anmol-seth-hDbCjHNdF48-unsplash.jpg" alt="Header Image" />
+                </picture>
+            </header>
+            <nav id="main-nav"></nav>
+            <main>
+                <section #main-section>
+                    <section id="main-section">
+                        <div class="title"><h3>Book a room</h3></div>
+                        <div class="main-content">
+                            <form action="/book-room" method="POST" class="book-room-form">
+                                <div class="form-section">
+                                    <div class="form-section-title"><span>Full Name</span></div>
+                                    <div class="form-section-content">
+                                        <div class="form-field">
+                                            <label for="firstName">First Name</label>
+                                            <input type="text" name="firstName" id="firstName" />
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="lastName">Last Name</label>
+                                            <input type="text" name="lastName" id="lastName" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-section">
+                                    <div class="form-section-title"><span>Phone and Email</span></div>
+                                    <div class="form-section-content">
+                                        <div class="form-field">
+                                            <label for="phone">Phone</label>
+                                            <input type="tel" name="phone" id="phone" />
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <div class="form-section-title"><span>Reservation period</span></div>
+                                    <div class="form-section-content">
+                                        <div class="form-field">
+                                            <label for="start">Start date:</label>
+                                            <input type="date" id="start" name="tripStart"
+                                                   min="2021-05-01" max="2023-12-31">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="end">End date:</label>
+                                            <input type="date" id="end" name="tripEnd"
+                                                   min="2021-05-01" max="2023-12-31">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <div class="form-section-title"><span>Accommodations</span></div>
+                                    <div class="form-section-content">
+                                        <div class="form-field">
+                                            <label for="adults">No of adults:</label>
+                                            <select name="adults" id="adults">
+                                                <option value="">Select …</option>
+                                                <option value="1">1 adult</option>
+                                                <option value="2">2 adults</option>
+                                                <option value="3">3 adults</option>
+                                                <option value="4">4 adults</option>
+                                                <option value="5">5 adults</option>
+                                                <option value="6">6 adults</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="kids">No of kids (if any):</label>
+                                            <select name="kids" id="kids">
+                                                <option value="">Select …</option>
+                                                <option value="0">0 kids</option>
+                                                <option value="1">1 kids</option>
+                                                <option value="2">2 kids</option>
+                                                <option value="3">3 kids</option>
+                                                <option value="4">4 kids</option>
+                                                <option value="5">5 kids</option>
+                                            </select>                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="submit">
+                                    <button type="submit">Make Reservation</button>
+                                </div>
+                            </form>
+                        </div>
+                </section>
+            </main>
+            <footer></footer>
+        </div>
+        <script src="/js/index.js" defer></script>
+    </body>
+</html>
